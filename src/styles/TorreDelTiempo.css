@@ -1,0 +1,186 @@
+.torre-del-tiempo {
+  background-image: url('../assets/bg6.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.screen-container {
+  display: flex; /* Divide los hijos en columnas */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  width: 100%; /* Ocupa toda la anchura de la pantalla */
+}
+
+.left-side,
+.right-side {
+  flex: 1; /* Ambas columnas ocupan el mismo espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.right-side {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo claro translúcido */
+  color: black;
+  text-align: center;
+}
+
+.torre-del-tiempo .title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.torre-del-tiempo .description {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.torre-del-tiempo .complete-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.torre-del-tiempo .next-btn {
+  margin-top: 2%;
+  margin-left: 30%;
+  padding: 5px 10px; /* Reducir el espacio interno */
+  font-size: 0.9em; /* Reducir el tamaño de la fuente */
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 3px; /* Hacer los bordes menos redondeados */
+  cursor: pointer;
+  background-color: #28a74588;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); /* Ajustar la sombra para menor intensidad */
+  transition: all 0.3s;
+}
+
+.torre-del-tiempo .complete-btn:hover, .next-btn:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  background-color: #28a745;
+}
+
+.mute-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 2em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.mute-btn:hover {
+  transform: scale(1.2);
+}
+
+.dialog {
+  display: flex;
+  align-items: center;
+}
+
+.character-img {
+  margin-left: 15%;
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.dialog-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  max-width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem; /* Reduce el espacio entre elementos */
+  margin-top: 10px; /* Margen más pequeño para mayor compacidad */
+}
+
+.instructions {
+  font-size: 1rem; /* Texto ligeramente más pequeño */
+  color: #555;
+  padding: 8px 12px; /* Menor relleno interno */
+  text-align: center;
+  max-width: 90%; /* Asegura que se ajuste en pantallas más pequeñas */
+  line-height: 1.4; /* Reduce el espacio entre líneas */
+}
+
+.event-item {
+  border: none;
+  font-size: 0.9rem; /* Tamaño de fuente reducido */
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra más ligera */
+  font-family: 'Roboto Slab', serif;
+  background-color: #00000044;
+  padding: 8px 12px; /* Reduce el tamaño del relleno */
+  border: 1.5px dashed #888; /* Bordes menos gruesos */
+  border-radius: 6px; /* Menor redondeo */
+  cursor: grab;
+  text-align: center;
+  width: 90%; /* Adapta al 90% del contenedor */
+  max-width: 300px; /* Limita el tamaño en pantallas grandes */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.event-item:hover {
+  background-color: #8eb5b1cc;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sutil ajuste en el color hover */
+}
+
+.event-item:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+}

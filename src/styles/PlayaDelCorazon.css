@@ -1,0 +1,176 @@
+.playa-del-corazon {
+  background-image: url('../assets/bg4.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.screen-container {
+  display: flex; /* Divide los hijos en columnas */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  width: 100%; /* Ocupa toda la anchura de la pantalla */
+}
+
+.left-side,
+.right-side {
+  flex: 1; /* Ambas columnas ocupan el mismo espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.right-side {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo claro translúcido */
+  color: black;
+  text-align: center;
+}
+
+.playa-del-corazon .title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.playa-del-corazon .description {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.playa-del-corazon .complete-btn{
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.playa-del-corazon .next-btn {
+  margin-top: 2%;
+  margin-left: 30%;
+  padding: 5px 10px; /* Reducir el espacio interno */
+  font-size: 0.9em; /* Reducir el tamaño de la fuente */
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 3px; /* Hacer los bordes menos redondeados */
+  cursor: pointer;
+  background-color: #28a74588;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); /* Ajustar la sombra para menor intensidad */
+  transition: all 0.3s;
+}
+
+.playa-del-corazon .complete-btn:hover, .next-btn:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+.mute-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 2em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.mute-btn:hover {
+  transform: scale(1.2);
+}
+
+.dialog {
+  display: flex;
+  align-items: center;
+}
+
+.character-img {
+  margin-left: 15%;
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.dialog-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  max-width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Deshabilitar selección de texto */
+.card {
+  user-select: none;
+}
+
+/* Otros estilos */
+.emoji-board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 80px; /* Tamaño ajustado de las cartas */
+  height: 80px; /* Tamaño ajustado de las cartas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.card-content {
+  font-size: 2.5rem; /* Tamaño de emoji ajustado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.flipped {
+  opacity: 1;
+  transform: scale(1.1); /* La carta se escala ligeramente */
+}
+
+.card.matched {
+  background-color: #4CAF50; /* Fondo verde cuando se emparejan */
+}

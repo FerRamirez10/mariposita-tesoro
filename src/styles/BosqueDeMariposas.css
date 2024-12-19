@@ -1,0 +1,196 @@
+.bosque-de-mariposas {
+  background-image: url('../assets/bg1.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.screen-container {
+  display: flex; /* Divide los hijos en columnas */
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+  width: 100%; /* Ocupa toda la anchura de la pantalla */
+}
+
+.left-side,
+.right-side {
+  flex: 1; /* Ambas columnas ocupan el mismo espacio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.right-side {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo claro translúcido */
+  color: black;
+  text-align: center;
+}
+
+.bosque-de-mariposas .title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bosque-de-mariposas .description {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.bosque-de-mariposas .complete-btn{
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+
+.bosque-de-mariposas .next-btn {
+  margin-top: 2%;
+  margin-left: 30%;
+  padding: 5px 10px; /* Reducir el espacio interno */
+  font-size: 0.9em; /* Reducir el tamaño de la fuente */
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 3px; /* Hacer los bordes menos redondeados */
+  cursor: pointer;
+  background-color: #28a745aa;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); /* Ajustar la sombra para menor intensidad */
+  transition: all 0.3s;
+}
+
+
+.bosque-de-mariposas .complete-btn:hover, .next-btn:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+.mute-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 2em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.mute-btn:hover {
+  transform: scale(1.2);
+}
+
+.dialog {
+  display: flex;
+  align-items: center;
+  
+}
+
+.character-img {
+  margin-left: 15%;
+  width: 150px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.dialog-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  max-width: 40%;
+}
+
+
+.bosque-de-mariposas .next-btn {
+  margin-top: 2%;
+  margin-left: 30%;
+  padding: 5px 10px; /* Reducir el espacio interno */
+  font-size: 0.9em; /* Reducir el tamaño de la fuente */
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 3px; /* Hacer los bordes menos redondeados */
+  cursor: pointer;
+  background-color: #28a745aa;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); /* Ajustar la sombra para menor intensidad */
+  transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.puzzle-piece {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.puzzle-piece img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.puzzle-piece:hover {
+  transform: scale(1.1);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-container p{
+  font-size: 1.2em; /* Reducir el tamaño de la fuente */
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  border-radius: 3px; /* Hacer los bordes menos redondeados */
+  cursor: pointer;
+  color: white;
+  text-shadow: 0px 0px 5px black,  /* Sombra intensa, difusa */
+               0px 0px 10px black, 
+               0px 0px 15px black;
+}
